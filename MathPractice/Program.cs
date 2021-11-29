@@ -7,14 +7,17 @@ int secondNumber;
 float thirdNumber;
 
 float sum;
+float sumRoundWhole;
 
 decimal sumDecimal;
 double sumDouble;
 
+int roundFloorNumber;
+int roundCeilingNumber;
+
 Console.WriteLine("Press any key to continue.\nPress ESC to exit.\n");
 while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
 {
-    
     RandomizeNumbers();
 
     sum = AddThreeNumbersIntoFloat(firstNumber, secondNumber, thirdNumber);
@@ -25,7 +28,6 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
     WriteRoundedNumbers();
     Console.WriteLine("Press any key to continue.\nPress ESC to exit.\n");
 }
-
 
 void RandomizeNumbers()
 {
@@ -40,7 +42,7 @@ float AddThreeNumbersIntoFloat(int firstNumber, int secondNumber, float thirdNum
 }
 void WriteSum()
 {
-    Console.WriteLine($"{firstNumber} + {secondNumber} + {thirdNumber} = {sum}\n");
+    Console.WriteLine($"float sum = {firstNumber} + {secondNumber} + {thirdNumber} = {sum}\n");
 }
 void CreateDifferentTypesFromSum()
 {
@@ -50,12 +52,16 @@ void CreateDifferentTypesFromSum()
 void RoundNumbers()
 {
     sumDouble = Math.Round(sumDouble);
-    sumDecimal = Math.Round(sumDecimal, 1);
-    sum = MathF.Round(sum);
+    sumDecimal = Math.Round(sumDecimal, 3);
+    sumRoundWhole = MathF.Round(sum);
+    roundCeilingNumber = (int)MathF.Ceiling(sum);
+    roundFloorNumber = (int)MathF.Floor(sum);
 }
 void WriteRoundedNumbers()
 {    
     Console.WriteLine("Math.Round for a double with no specified amount of digits = " + sumDouble);
-    Console.WriteLine("Math.Round for a decimal to 1 digit = " + sumDecimal);
-    Console.WriteLine("MathF.Round for a float with no specified amount of digits = " + sum + "\n");
+    Console.WriteLine("Math.Round for a decimal to 3 digits = " + sumDecimal);    
+    Console.WriteLine("Ceiling of sum = " + roundCeilingNumber);
+    Console.WriteLine("Floor of sum = " + roundFloorNumber);
+    Console.WriteLine("MathF.Round for a float with no specified amount of digits = " + sumRoundWhole + "\n");
 }

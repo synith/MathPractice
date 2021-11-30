@@ -1,8 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-
-using MathPractice;
+﻿using MathPractice;
 
 RequestAnyKey();
 while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))

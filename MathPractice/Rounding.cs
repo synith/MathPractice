@@ -34,27 +34,21 @@ namespace MathPractice
             RoundNumbers();
             WriteRoundedNumbers();
         }
-
         void RandomizeNumbers()
         {
             firstNumber = random.Next(0, 11);
             secondNumber = random.Next(0, 11);
             thirdNumber = random.Next(0, 11) + random.NextSingle();
         }
-        float AddThreeNumbersIntoFloat(int firstNumber, int secondNumber, float thirdNumber)
-        {
-            float sum;
-            sum = firstNumber + secondNumber + thirdNumber;
-            return sum;
-        }
+        float AddThreeNumbersIntoFloat(int firstNumber, int secondNumber, float thirdNumber) => firstNumber + secondNumber + thirdNumber;
         void WriteSum()
         {
             Console.WriteLine($"float sum = {firstNumber} + {secondNumber} + {thirdNumber} = {sum}\n");
         }
         void CreateDifferentTypesFromSum()
         {
-            sumDecimal = ((decimal)sum);
-            sumDouble = ((double)sum);
+            sumDecimal = (decimal)sum;
+            sumDouble = sum;
         }
         void RoundNumbers()
         {

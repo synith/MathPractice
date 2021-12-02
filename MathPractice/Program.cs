@@ -31,7 +31,8 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             break;
         case ConsoleKey.D4:
             Console.Write("\n");
-            // nth Root example here
+            NthRoot nthRoot = new NthRoot();
+            nthRoot.NthRootExample();
             RequestAnyKey();
             break;
         default:

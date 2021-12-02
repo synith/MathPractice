@@ -8,9 +8,9 @@ namespace MathPractice
 {
     internal class Exponentiation
     {
-        int baseNumber;
-        int exponentNumber;
-        int result;
+        float baseNumber;
+        float exponentNumber;
+        float result;
 
         public void ExponentiationExample()
         {
@@ -25,7 +25,7 @@ namespace MathPractice
             {
                 Console.WriteLine("Enter the base number...");
 
-                if (int.TryParse(Console.ReadLine(), out int num))
+                if (float.TryParse(Console.ReadLine(), out float num))
                 {
                     Console.WriteLine($"You entered {num} as the base\n");
                     baseNumber = num;
@@ -45,7 +45,7 @@ namespace MathPractice
             {
                 Console.WriteLine("Enter the exponent number...");
 
-                if (int.TryParse(Console.ReadLine(), out int num))
+                if (float.TryParse(Console.ReadLine(), out float num))
                 {
                     Console.WriteLine($"You entered {num} as the exponent\n");
                     exponentNumber = num;
@@ -59,7 +59,7 @@ namespace MathPractice
         }
         private void CalculateResults()
         {
-            result = (int)Math.Pow(baseNumber, exponentNumber);
+            result = MathF.Pow(baseNumber, exponentNumber);
             Console.WriteLine($"{baseNumber} to the power of {exponentNumber} is {result}");
         }
     }

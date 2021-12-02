@@ -6,7 +6,8 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
     Console.WriteLine(
         "Press 1 to enter Rounding Example.\n" +
         "Press 2 to enter Remainder Example.\n" +
-        "Press 3 to enter Exponent Example.\n" + 
+        "Press 3 to enter Exponent Example.\n" +
+        "Press 4 to enter nth Root Example.\n" +
         "Press ESC to Exit.\n");
     switch (Console.ReadKey(true).Key)
     {        
@@ -26,7 +27,11 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             Console.Write("\n");
             Exponentiation exponentiation = new Exponentiation();
             exponentiation.ExponentiationExample();
-            // Exponent example here
+            RequestAnyKey();
+            break;
+        case ConsoleKey.D4:
+            Console.Write("\n");
+            // nth Root example here
             RequestAnyKey();
             break;
         default:

@@ -38,7 +38,8 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             break;
         case ConsoleKey.D5:
             Console.Write("\n");
-            // logarithm example here
+            Logarithm logarithm = new Logarithm();
+            logarithm.LogExample();
             RequestAnyKey();
             break;
         default:

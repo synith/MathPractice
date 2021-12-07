@@ -8,6 +8,7 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
         "Press 2 to enter Remainder Example.\n" +
         "Press 3 to enter Exponent Example.\n" +
         "Press 4 to enter nth Root Example.\n" +
+        "Press 5 to enter Logarithm Example.\n" +
         "Press ESC to Exit.\n");
     switch (Console.ReadKey(true).Key)
     {        
@@ -33,6 +34,11 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             Console.Write("\n");
             NthRoot nthRoot = new NthRoot();
             nthRoot.NthRootExample();
+            RequestAnyKey();
+            break;
+        case ConsoleKey.D5:
+            Console.Write("\n");
+            // logarithm example here
             RequestAnyKey();
             break;
         default:

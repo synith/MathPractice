@@ -87,7 +87,8 @@ void FactorialsPermutationsCombinationsMenu()
                 break;
             case ConsoleKey.D3:
                 Console.Write("\n");
-                // Combinations example
+                Combination combination = new();
+                combination.CombinationExample();
                 RequestAnyKey();
                 break;
             default:

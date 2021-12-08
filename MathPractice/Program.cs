@@ -75,7 +75,8 @@ void FactorialsPermutationsCombinationsMenu()
                 return;
             case ConsoleKey.D1:
                 Console.Write("\n");
-                // Factorial example
+                Factorial factorial = new Factorial();
+                factorial.FactorialExample();
                 RequestAnyKey();
                 break;
             case ConsoleKey.D2:

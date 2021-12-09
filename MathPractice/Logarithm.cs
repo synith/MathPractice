@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathPractice
 {
+    using static ValueRequest;
     internal class Logarithm
     {
         float x;
@@ -15,8 +16,8 @@ namespace MathPractice
         public void LogExample()
         {
             Console.WriteLine("Enter x and b to find the value of Log x base b...\n");
-            x = ValueRequest.AskForValueFloat("x");
-            b = ValueRequest.AskForValueFloat("b");
+            x = AskForValueFloat("x");
+            b = AskForValueFloat("b");
             CalculateResults();
         }        
         private void CalculateResults()

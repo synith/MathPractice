@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MathPractice
 {
+    using static ValueRequest;
     internal class Combination
     {
         int n;
@@ -16,8 +17,8 @@ namespace MathPractice
         public void CombinationExample()
         {
             Console.WriteLine("Enter n and k as whole numbers to find C(n,k)....\n");
-            n = ValueRequest.AskForValueInt("n");
-            k = ValueRequest.AskForValueInt("k");
+            n = AskForValueInt("n");
+            k = AskForValueInt("k");
             CalculateResults();
         }
         private void CalculateResults()

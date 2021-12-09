@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathPractice
 {
+    using static ValueRequest;
     internal class Exponentiation
     {
         float baseNumber;
@@ -14,8 +15,8 @@ namespace MathPractice
 
         public void ExponentiationExample()
         {
-            baseNumber = ValueRequest.AskForValueFloat("base");
-            exponentNumber = ValueRequest.AskForValueFloat("exponent");
+            baseNumber = AskForValueFloat("base");
+            exponentNumber = AskForValueFloat("exponent");
             CalculateResults();
         }       
         private void CalculateResults()

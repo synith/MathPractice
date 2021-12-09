@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MathPractice
 {
+    using static ValueRequest;
     internal class Permutation
     {
         int n;
@@ -16,8 +17,8 @@ namespace MathPractice
         public void PermutationExample()
         {
             Console.WriteLine("Enter n and k as whole numbers to find P(n,k)....\n");
-            n = ValueRequest.AskForValueInt("n");
-            k = ValueRequest.AskForValueInt("k");
+            n = AskForValueInt("n");
+            k = AskForValueInt("k");
             CalculateResults();
         }        
         private void CalculateResults()

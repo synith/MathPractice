@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MathPractice
 {
+    using static ValueRequest;
     internal class NthRoot
     {
         float x;
@@ -15,8 +16,8 @@ namespace MathPractice
         public void NthRootExample()
         {
             Console.WriteLine("Enter x and n to find the nth root of x....\n");
-            x = ValueRequest.AskForValueFloat("x");
-            n = ValueRequest.AskForValueFloat("n");
+            x = AskForValueFloat("x");
+            n = AskForValueFloat("n");
             CalculateResults();
         }
         private void CalculateResults()

@@ -4,17 +4,18 @@ RequestAnyKey();
 while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
 {
     Console.WriteLine(
-        "Press 1 to enter Rounding Example.\n" +
-        "Press 2 to enter Remainder Example.\n" +
-        "Press 3 to enter Exponent Example.\n" +
-        "Press 4 to enter nth Root Example.\n" +
-        "Press 5 to enter Logarithm Example.\n" +
-        "Press 6 to enter Factorials, Permutations and Combinations Example.\n" +
+        "Press 1 to enter Rounding example.\n" +
+        "Press 2 to enter Remainder example.\n" +
+        "Press 3 to enter Exponent calculator.\n" +
+        "Press 4 to enter nth Root calculator.\n" +
+        "Press 5 to enter Logarithm calculator.\n" +
+        "Press 6 to enter Factorials, Permutations and Combinations calculator.\n" +
+        "Press 7 to enter Number Bases calculator.\n" +
         "Press ESC to Exit.\n");
     switch (Console.ReadKey(true).Key)
     {
         case ConsoleKey.Escape:
-            return;
+            break;
         case ConsoleKey.D1:
             Console.Write("\n");
             Rounding rounding = new Rounding();
@@ -50,6 +51,12 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             FactorialsPermutationsCombinationsMenu();
             RequestAnyKey();
             break;
+        case ConsoleKey.D7:
+            Console.Write("\n");
+            NumberBases numberBases = new();
+            numberBases.NumberBaseExample();
+            RequestAnyKey();
+            break;
         default:
             break;
     }
@@ -64,9 +71,9 @@ void FactorialsPermutationsCombinationsMenu()
     while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
     {
         Console.WriteLine(
-            "Press 1 to enter Factorials Example.\n" +
-            "Press 2 to enter Permutations Example.\n" +
-            "Press 3 to enter Combinations Example.\n" +
+            "Press 1 to enter Factorials calculator.\n" +
+            "Press 2 to enter Permutations calculator.\n" +
+            "Press 3 to enter Combinations calculator.\n" +
             "Press ESC to Exit.\n");
         switch (Console.ReadKey(true).Key)
         {

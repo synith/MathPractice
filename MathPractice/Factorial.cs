@@ -32,8 +32,8 @@ namespace MathPractice
         {
             int m = n;
             result = CalculateFactorial(n);
-            
-            Console.WriteLine($"The value of {m}! is {result.ToString("E")}");
+            string resultString = result >= 1000000 ? result.ToString("E") : result.ToString("N0");
+            Console.WriteLine($"The value of {m}! is {resultString}");
         }
     }
 }

@@ -25,8 +25,8 @@ namespace MathPractice
             Factorial factorial = new();
 
             result = factorial.CalculateFactorial(n) / (factorial.CalculateFactorial(n - k) * factorial.CalculateFactorial(k));
-            result.ToString("E");
-            Console.WriteLine($"C({n},{k}) = {result}");
+            string resultString = result >= 1000000 ? result.ToString("E") : result.ToString("N0");
+            Console.WriteLine($"C({n},{k}) = {resultString}");
         }
     }
 }

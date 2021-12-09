@@ -18,31 +18,31 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             break;
         case ConsoleKey.D1:
             Console.Write("\n");
-            Rounding rounding = new Rounding();
+            Rounding rounding = new();
             rounding.RoundingExample();
             RequestAnyKey();
             break;
         case ConsoleKey.D2:
             Console.Write("\n");
-            Remainder remainder = new Remainder();
+            Remainder remainder = new();
             remainder.RemainderExample();
             RequestAnyKey();
             break;
         case ConsoleKey.D3:
             Console.Write("\n");
-            Exponentiation exponentiation = new Exponentiation();
+            Exponentiation exponentiation = new();
             exponentiation.ExponentiationExample();
             RequestAnyKey();
             break;
         case ConsoleKey.D4:
             Console.Write("\n");
-            NthRoot nthRoot = new NthRoot();
+            NthRoot nthRoot = new();
             nthRoot.NthRootExample();
             RequestAnyKey();
             break;
         case ConsoleKey.D5:
             Console.Write("\n");
-            Logarithm logarithm = new Logarithm();
+            Logarithm logarithm = new();
             logarithm.LogExample();
             RequestAnyKey();
             break;
@@ -82,7 +82,7 @@ void FactorialsPermutationsCombinationsMenu()
                 return;
             case ConsoleKey.D1:
                 Console.Write("\n");
-                Factorial factorial = new Factorial();
+                Factorial factorial = new();
                 factorial.FactorialExample();
                 RequestAnyKey();
                 break;

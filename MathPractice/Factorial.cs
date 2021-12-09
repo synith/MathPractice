@@ -15,7 +15,7 @@ namespace MathPractice
         public void FactorialExample()
         {
             Console.WriteLine("Enter n as a whole number to find the value of n!...\n");
-            AskForN();
+            n = ValueRequest.AskForValueInt("n");
             WriteResults();
         }
         public BigInteger CalculateFactorial(int n)
@@ -27,25 +27,6 @@ namespace MathPractice
                 n--;
             }
             return result;
-        }
-        void AskForN()
-        {
-            bool validNumber = false;
-            while (!validNumber)
-            {
-                Console.WriteLine("n =");
-
-                if (int.TryParse(Console.ReadLine(), out int num))
-                {
-                    Console.WriteLine($"You've entered {num} as n\n");
-                    n = num;
-                    validNumber = true;
-                }
-                else
-                {
-                    Console.WriteLine("invalid entry, please try again");
-                }
-            }
         }
         private void WriteResults()
         {

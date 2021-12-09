@@ -15,47 +15,9 @@ namespace MathPractice
         public void NthRootExample()
         {
             Console.WriteLine("Enter x and n to find the nth root of x....\n");
-            AskForX();
-            AskForN();
+            x = ValueRequest.AskForValueFloat("x");
+            n = ValueRequest.AskForValueFloat("n");
             CalculateResults();
-        }
-        void AskForX()
-        {
-            bool validNumber = false;
-            while (!validNumber)
-            {
-                Console.WriteLine("x =");
-
-                if (float.TryParse(Console.ReadLine(), out float num))
-                {
-                    Console.WriteLine($"You've entered {num} as the x value\n");
-                    x = num;
-                    validNumber = true;
-                }
-                else
-                {
-                    Console.WriteLine("invalid entry, please try again");
-                }
-            }
-        }
-        void AskForN()
-        {
-            bool validNumber = false;
-            while (!validNumber)
-            {
-                Console.WriteLine("n =");
-
-                if (float.TryParse(Console.ReadLine(), out float num))
-                {
-                    Console.WriteLine($"You've entered {num} as the n value\n");
-                    n = num;
-                    validNumber = true;
-                }
-                else
-                {
-                    Console.WriteLine("invalid entry, please try again");
-                }
-            }
         }
         private void CalculateResults()
         {

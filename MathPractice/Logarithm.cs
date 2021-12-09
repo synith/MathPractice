@@ -15,48 +15,10 @@ namespace MathPractice
         public void LogExample()
         {
             Console.WriteLine("Enter x and b to find the value of Log x base b...\n");
-            AskForX();
-            AskForB();
+            x = ValueRequest.AskForValueFloat("x");
+            b = ValueRequest.AskForValueFloat("b");
             CalculateResults();
-        }
-        void AskForX()
-        {
-            bool validNumber = false;
-            while (!validNumber)
-            {
-                Console.WriteLine("x =");
-
-                if (float.TryParse(Console.ReadLine(), out float num))
-                {
-                    Console.WriteLine($"You've entered {num} as the x value\n");
-                    x = num;
-                    validNumber = true;
-                }
-                else
-                {
-                    Console.WriteLine("invalid entry, please try again");
-                }
-            }
-        }
-        void AskForB()
-        {
-            bool validNumber = false;
-            while (!validNumber)
-            {
-                Console.WriteLine("b =");
-
-                if (float.TryParse(Console.ReadLine(), out float num))
-                {
-                    Console.WriteLine($"You've entered {num} as the b value\n");
-                    b = num;
-                    validNumber = true;
-                }
-                else
-                {
-                    Console.WriteLine("invalid entry, please try again");
-                }
-            }
-        }
+        }        
         private void CalculateResults()
         {
             result = MathF.Log(x,b);

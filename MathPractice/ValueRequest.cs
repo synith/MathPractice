@@ -6,19 +6,28 @@ using System.Threading.Tasks;
 
 namespace MathPractice
 {
+    /// <summary>
+    /// Provides static methods for requesting values from <see cref="Console"/>.
+    /// </summary>
     internal static class ValueRequest
     {
-        public static float AskForValueFloat(string valueString)
+
+        /// <summary>
+        /// Writes in console requesting a value named <paramref name="valueName"/> to be entered.
+        /// </summary>
+        /// <param name="valueName">The name of the value being requested.</param>
+        /// <returns>The value read from console.</returns>
+        public static float AskForValueFloat(string valueName)
         {
             float value = 0f;
             bool validNumber = false;
             while (!validNumber)
             {
-                Console.WriteLine($"{valueString} =");
+                Console.WriteLine($"{valueName} =");
 
                 if (float.TryParse(Console.ReadLine(), out float num))
                 {
-                    Console.WriteLine($"You've entered {num} as the {valueString} value\n");
+                    Console.WriteLine($"You've entered {num} as the {valueName} value\n");
                     value = num;
                     validNumber = true;
                 }
@@ -29,17 +38,23 @@ namespace MathPractice
             }
             return value;
         }
-        public static int AskForValueInt(string valueString) 
+
+        /// <summary>
+        /// Writes in console requesting a value named <paramref name="valueName"/> to be entered.
+        /// </summary>
+        /// <param name="valueName">The name of the value being requested.</param>
+        /// <returns>The value read from console.</returns>
+        public static int AskForValueInt(string valueName) 
         {
             int value = 0;
             bool validNumber = false;
             while (!validNumber)
             {
-                Console.WriteLine($"{valueString} =");
+                Console.WriteLine($"{valueName} =");
 
                 if (int.TryParse(Console.ReadLine(), out int num))
                 {
-                    Console.WriteLine($"You've entered {num} as the {valueString} value\n");
+                    Console.WriteLine($"You've entered {num} as the {valueName} value\n");
                     value = num;
                     validNumber = true;
                 }

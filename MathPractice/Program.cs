@@ -11,6 +11,7 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
         "Press 5 to enter Logarithm calculator.\n" +
         "Press 6 to enter Factorials, Permutations and Combinations calculator.\n" +
         "Press 7 to enter Number Bases calculator.\n" +
+        "Press 8 to enter FOIL calculator.\n" +
         "Press ESC to Exit.\n");
     switch (Console.ReadKey(true).Key)
     {
@@ -55,6 +56,11 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             Console.Write("\n");
             NumberBases numberBases = new();
             numberBases.NumberBaseExample();
+            RequestAnyKey();
+            break;
+        case ConsoleKey.D8:
+            Console.Write("\n");
+            // FOILExample
             RequestAnyKey();
             break;
         default:

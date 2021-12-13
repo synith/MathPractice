@@ -60,7 +60,8 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             break;
         case ConsoleKey.D8:
             Console.Write("\n");
-            // FOILExample
+            FirstOuterInnerLast foil = new();
+            foil.FoilExample();
             RequestAnyKey();
             break;
         default:

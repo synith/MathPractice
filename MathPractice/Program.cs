@@ -12,6 +12,7 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
         "Press 6 to enter Factorials, Permutations and Combinations calculator.\n" +
         "Press 7 to enter Number Bases calculator.\n" +
         "Press 8 to enter FOIL calculator.\n" +
+        "Press 9 to enter DEG/RAD converter.\n" +
         "Press ESC to Exit.\n");
     switch (Console.ReadKey(true).Key)
     {
@@ -62,6 +63,12 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             Console.Write("\n");
             FirstOuterInnerLast foil = new();
             foil.FoilExample();
+            RequestAnyKey();
+            break;
+        case ConsoleKey.D9:
+            Console.Write("\n");
+            DegRadConverter degRadConverter = new();
+            degRadConverter.DegRadConverterExample();
             RequestAnyKey();
             break;
         default:

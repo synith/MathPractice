@@ -13,6 +13,7 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
         "Press 7 to enter Number Bases calculator.\n" +
         "Press 8 to enter FOIL calculator.\n" +
         "Press 9 to enter DEG/RAD converter.\n" +
+        "Press 0 to enter Sine, Cosine and Tangent calculator.\n" +
         "Press ESC to Exit.\n");
     switch (Console.ReadKey(true).Key)
     {
@@ -69,6 +70,12 @@ while (!(Console.ReadKey(true).Key == ConsoleKey.Escape))
             Console.Write("\n");
             DegRadConverter degRadConverter = new();
             degRadConverter.DegRadConverterExample();
+            RequestAnyKey();
+            break;
+        case ConsoleKey.D0:
+            Console.Write("\n");
+            SinCosTan sinCosTan = new();
+            sinCosTan.SinCosTanExample();
             RequestAnyKey();
             break;
         default:
